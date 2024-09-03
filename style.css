@@ -1,3 +1,7 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 h1,
 h3 {
     color: darkcyan;
@@ -61,6 +65,12 @@ select {
     border-radius: 7px;
     text-align: center;
     font-size: 18px;
+    color: darkcyan;
+    background-color: white;
+}
+
+select:focus{
+    outline:1px solid darkcyan;
 }
 
 #calc {
