@@ -1,11 +1,5 @@
-body{
+body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-h1,
-h3 {
-    color: darkcyan;
-    text-align: center;
 }
 
 .container {
@@ -34,6 +28,21 @@ h3 {
     .container {
         width: 1170px;
     }
+}
+
+h1,
+h3 {
+    color: darkcyan;
+    text-align: center;
+}
+
+.line{
+    display: block;
+    margin: auto;
+    background-color: darkcyan;
+    height: 2px;
+    width: 100px;
+    margin-top: -8px;
 }
 
 .content {
@@ -69,8 +78,8 @@ select {
     background-color: white;
 }
 
-select:focus{
-    outline:1px solid darkcyan;
+select:focus {
+    outline: 1px solid darkcyan;
 }
 
 #calc {
@@ -92,7 +101,7 @@ select:focus{
     font-size: 21px;
 }
 
-#result{
+#result {
     color: white;
     font-size: 20px;
     margin-top: 20px;
