@@ -43,11 +43,9 @@ function calcAge(date) {
   let diffDays = today.getDate() - birthDate.getDate();
 
   if (diffDays < 0) {
-    console.log(diffDays);
     let prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
     diffDays += prevMonth.getDate();
     diffMonths--;
-    console.log(diffDays);
   }
 
   if (diffMonths < 0) {
@@ -63,6 +61,7 @@ document.getElementById("calc").onclick = function () {
   let day = document.getElementById("days").value;
   let month = document.getElementById("months").value;
   let year = document.getElementById("years").value;
+  // Check Errors
   let error = "";
   if (day === "Select Day") error += "Invalid Day! ";
   if (month === "Select Month") error += "Invalid Month! ";
@@ -74,11 +73,12 @@ document.getElementById("calc").onclick = function () {
       "Error: " + error + "Please, try again.";
     return;
   }
-  console.log(month);
+  ///////////////////////////////////////////////
+
   month = months.indexOf(month);
-  const today = new Date();
+
   const birthDate = new Date();
-  birthDate.setFullYear(year, ++month, day);
+  birthDate.setFullYear(year, month, day);
 
   let difference = calcAge(birthDate);
   let result = `${difference.diffYears} Years, ${difference.diffMonths} Month/s and ${difference.diffDays} Day/s`;
